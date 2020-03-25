@@ -22,7 +22,7 @@ public class GeoserverCommandsTest extends BaseTest {
 
     @Test
     public void set() throws IOException {
-        whenHttp(server).match(get("/geoserver/rest/about/versions.xml")).then(stringContent(getResourceString("version.xml")), status(HttpStatus.OK_200));
+        whenHttp(server).match(get("/geoserver/rest/about/version.xml")).then(stringContent(getResourceString("version.xml")), status(HttpStatus.OK_200));
         Geoserver gs = new Geoserver();
         GeoserverCommands commands = new GeoserverCommands();
         commands.setGeoserver(gs);
@@ -38,7 +38,7 @@ public class GeoserverCommandsTest extends BaseTest {
 
     @Test
     public void setBadUrl() throws IOException {
-        whenHttp(server).match(get("/geoserver/rest/about/versions.xml")).then(stringContent(getResourceString("version.xml")), status(HttpStatus.OK_200));
+        whenHttp(server).match(get("/geoserver/rest/about/version.xml")).then(stringContent(getResourceString("version.xml")), status(HttpStatus.OK_200));
         Geoserver gs = new Geoserver();
         GeoserverCommands commands = new GeoserverCommands();
         commands.setGeoserver(gs);

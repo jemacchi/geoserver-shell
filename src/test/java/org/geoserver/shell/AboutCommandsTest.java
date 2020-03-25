@@ -16,7 +16,7 @@ public class AboutCommandsTest extends BaseTest {
 
     @Test
     public void versionList() throws Exception {
-        whenHttp(server).match(get("/geoserver/rest/about/versions.xml")).then(stringContent(getResourceString("version.xml")), status(HttpStatus.OK_200));
+        whenHttp(server).match(get("/geoserver/rest/about/version.xml")).then(stringContent(getResourceString("version.xml")), status(HttpStatus.OK_200));
 
         Geoserver geoserver = new Geoserver("http://00.0.0.0:8888/geoserver", "admin", "geoserver");
         AboutCommands commands = new AboutCommands();
@@ -39,7 +39,7 @@ public class AboutCommandsTest extends BaseTest {
                 + OsUtils.LINE_SEPARATOR;
         assertEquals(expected, actual);
 
-        verifyHttp(server).once(method(Method.GET), uri("/geoserver/rest/about/versions.xml"));
+        verifyHttp(server).once(method(Method.GET), uri("/geoserver/rest/about/version.xml"));
     }
 
     @Test

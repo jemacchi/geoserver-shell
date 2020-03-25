@@ -43,7 +43,7 @@ public class GeoserverCommands implements CommandMarker {
         geoserver.setUser(user);
         geoserver.setPassword(password);
         // Ping URL with username and password
-        String response = HTTPUtils.get(geoserver.getUrl() + "/rest/about/versions.xml", geoserver.getUser(), geoserver.getPassword());
+        String response = HTTPUtils.get(geoserver.getUrl() + "/rest/about/version.xml", geoserver.getUser(), geoserver.getPassword());
         return response != null;
     }
 

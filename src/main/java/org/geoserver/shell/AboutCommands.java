@@ -31,7 +31,7 @@ public class AboutCommands implements CommandMarker {
     @CliCommand(value = "version list", help = "Get versions.")
     public String versionList() throws Exception {
         String TAB = "   ";
-        String xml = HTTPUtils.get(geoserver.getUrl() + "/rest/about/versions.xml", geoserver.getUser(), geoserver.getPassword());
+        String xml = HTTPUtils.get(geoserver.getUrl() + "/rest/about/version.xml", geoserver.getUser(), geoserver.getPassword());
         StringBuilder builder = new StringBuilder();
         Element root = JDOMBuilder.buildElement(xml);
 
