@@ -24,7 +24,7 @@ public class GeoserverBannerProvider extends DefaultBannerProvider implements Co
 
     @Override
     public String getVersion() {
-        return "0.2.1";
+        return "0.4.1-SNAPSHOT";
     }
 
     @Override
