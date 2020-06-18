@@ -18,7 +18,7 @@ Build
 
 Clone the repository::
 
-    git clone git://github.com/jericks/geoserver-shell.git
+    git clone https://github.com/jemacchi/geoserver-shell
 
 Build the code::
 
@@ -28,8 +28,21 @@ Run the geoserver-shell::
 
     target/gs-shell-app/gs-shell-1.0-SNAPSHOT/bin/gs-shell
 
-Examples
---------
+Build your docker image for Geoserver-shell
+-------------------------------------------
+
+Clone the repository::
+
+    git clone https://github.com/jemacchi/geoserver-shell
+
+Build code and docker image::
+
+    ./build.sh
+
+Then you can create a Docker container from created image.
+    
+Examples using Geoserver-shell
+------------------------------
 
 Create a Workspace::
 
