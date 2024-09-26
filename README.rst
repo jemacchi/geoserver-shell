@@ -1,6 +1,9 @@
 .. image:: https://travis-ci.org/jericks/geoserver-shell.svg?branch=master
     :target: https://travis-ci.org/jericks/geoserver-shell
 
+.. image:: https://github.com/jericks/geoserver-shell/workflows/Maven%20Build/badge.svg
+    :target: https://github.com/jericks/geoserver-shell/actions
+
 GeoServer Shell
 ===============
 Administer Geoserver using a command line interface (CLI).  Geoserver Shell uses the same shell interface used by Spring Roo and
@@ -26,7 +29,7 @@ Build the code::
 
 Run the geoserver-shell::
 
-    target/gs-shell-app/gs-shell-1.0-SNAPSHOT/bin/gs-shell
+    target/gs-shell-1.0-SNAPSHOT/bin/gs-shell
 
 Build your docker image for Geoserver-shell
 -------------------------------------------
